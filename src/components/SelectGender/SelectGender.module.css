@@ -1,0 +1,156 @@
+.bodyDiv {
+  align-items: center;
+  background-image: url('../../../assets/backgroundImage/dog.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 991px) {
+  .modalDiv {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    height: 30%;
+    color: black;
+  }
+
+  .headingDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+  }
+
+  .heading {
+    margin: 0px;
+    font-size: 2em;
+  }
+
+  .buttonDiv {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 30%;
+    height: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .modalDiv {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 50%;
+    height: 30%;
+    color: black;
+  }
+
+  .headingDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+  }
+
+  .heading {
+    margin: 0px;
+    font-size: 1.6em;
+  }
+
+  .buttonDiv {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 30%;
+    height: 40%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .modalDiv {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    text-align: center;
+    width: 50%;
+    height: 30%;
+  }
+
+  .headingDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+  }
+
+  .heading {
+    margin: 0px;
+    font-size: 1.6em;
+  }
+
+  .buttonDiv {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modalDiv {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    text-align: center;
+    width: 50%;
+    height: 30%;
+  }
+
+  .headingDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+  }
+
+  .buttonDiv {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .heading {
+    margin: 0px;
+    font-size: 1.6em;
+  }
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 40%;
+  }
+}
