@@ -1,37 +1,49 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.css';
+import { GoThreeBars } from 'react-icons/go';
+import { VscChromeClose } from 'react-icons/vsc';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false)
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  let icon;
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-    useEffect(() => {
+  let navigate = useNavigate();
 
+  useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
-    }
+    };
 
-        return () => {
-        window.removeEventListener('resize', changeWidth)
-    }
+    return () => {
+      window.removeEventListener('resize', changeWidth);
+    };
+  }, []);
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu);
+  };
 
-
-  }, [])
-    const toggleNav = () => {
-    setToggleMenu(!toggleMenu)
+  if (!toggleMenu) {
+    icon = <GoThreeBars />;
+  } else {
+    icon = <VscChromeClose />;
   }
+  
   return (
-      <nav>
-          {(toggleMenu || screenWidth > 500) && (
-      <ul className={styles.list}>
-          <li className={styles.items}>Home</li>
-          <li className={styles.items}>Services</li>
-          <li className={styles.items}>Contact</li>
+    <nav>
+      {(toggleMenu || screenWidth > 500) && (
+        <ul className={styles.list}>
+          <li className={styles.items}><button className={ styles.liBtn} onClick={() => navigate('/')}>Select Side</button></li>
+          <li className={styles.items}><button className={ styles.liBtn} onClick={() => navigate('/')}>Venues</button></li>
+          <li className={styles.items}><button className={ styles.liBtn} onClick={() => navigate('/')}>Contact Us</button></li>
         </ul>
-              )}
-      <button onClick={toggleNav} className={styles.btn}>BTN</button>
+      )}
+      <button onClick={toggleNav} className={styles.btn}>
+        {icon}
+      </button>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;

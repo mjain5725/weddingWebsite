@@ -17,10 +17,3 @@ export const changeGender = createSlice({
 export const { changeSelectedGender } = changeGender.actions;
 
 export default changeGender.reducer;
-
-// export default (state = initState, action) => {
-//     switch (action.type) {
-//         default :
-//             return state;
-//     }
-// }

@@ -15,22 +15,22 @@ const SelectGender = () => {
 
   return (
     <div className={styles.bodyDiv}>
-      <div className={styles.modalDiv}>
+      <div>
         <div className={styles.headingDiv}>
-          <h1 className={styles.heading}> This is going to be select page</h1>
+          <h1 className={styles.heading}> Please Select Your Side!</h1>
         </div>
         <div className={styles.buttonDiv}>
           <button
             className={styles.button}
             onClick={() => navigateLandingPage('male')}
           >
-            Male
+            Groom
           </button>
           <button
             className={styles.button}
             onClick={() => navigateLandingPage('female')}
           >
-            Female
+            Bride
           </button>
         </div>
       </div>
